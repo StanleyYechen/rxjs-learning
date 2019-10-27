@@ -1,0 +1,21 @@
+{
+  "name": "rxjs-learning",
+  "version": "1.0.0",
+  "description": "rxjs learning demos",
+  "main": "index.js",
+  "repository": "https://github.com/StanleyYechen/rxjs-learning.git",
+  "author": "stanley.ye <stayrealye@126.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.js"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.3"
+  }
+}
