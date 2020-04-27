@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './index.js',
+  entry: ['babel-polyfill', './index.js'],
   module: {
     rules: [
       {
@@ -19,7 +19,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new htmlWebpackPlugin()
+    new htmlWebpackPlugin({
+      title: 'Hello RxJs',
+      template: './index.html',
+    })
   ],
   devServer: {
     port: 3000,

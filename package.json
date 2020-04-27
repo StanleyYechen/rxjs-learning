@@ -19,6 +19,7 @@
     "start": "webpack-dev-server --config webpack.config.js"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "rxjs": "^6.5.3"
   }
 }
