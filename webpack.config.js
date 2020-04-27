@@ -4,15 +4,22 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: './index.js',
+  module: {
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      }
+    ]
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new htmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new htmlWebpackPlugin()
   ],
   devServer: {
     port: 3000,
